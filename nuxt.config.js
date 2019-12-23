@@ -13,6 +13,16 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script:[
+      {
+        src: "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js",
+        type: "text/javascript"
+      },
+      {
+        src: "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js",
+        type: "text/javascript"
+      }
     ]
   },
   /*

@@ -1,15 +1,16 @@
 <template>
   <div>
+    <Header />
     <nuxt />
+    <Footer />
   </div>
 </template>
 
-<style>
-html {
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+<script>
+export default {
+  components:{
+    Header: () => import('@/components/Header.vue'),
+    Footer: () => import('@/components/Footer.vue')
+  }
 }
-</style>
+</script>
