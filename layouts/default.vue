@@ -3,6 +3,7 @@
     <Header />
     <nuxt />
     <Footer />
+    <Mobile />
   </div>
 </template>
 
@@ -10,7 +11,8 @@
 export default {
   components:{
     Header: () => import('@/components/Header.vue'),
-    Footer: () => import('@/components/Footer.vue')
+    Footer: () => import('@/components/Footer.vue'),
+    Mobile: () => import('@/components/Mobile.vue')
   }
 }
 </script>
