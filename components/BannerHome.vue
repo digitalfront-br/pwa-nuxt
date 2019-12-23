@@ -1,15 +1,16 @@
 <template>
   <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push; ratio: 16:9">
 
-    <ul class="uk-slideshow-items">
-        <li>
-            <img src="https://getuikit.com/docs/images/photo.jpg" alt="" uk-cover>
+    <ul class="uk-slideshow-items" >
+        <li v-for="b in dados" :key="b.node.id">
+            <img :src="b.node.img.url" alt="" uk-cover>
+             <div class="uk-overlay-primary uk-position-cover"></div>
             <div class="uk-position-center uk-position-small uk-text-center uk-light">
-                <h2 class="uk-margin-remove">Center</h2>
-                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h2 class="uk-margin-remove">{{ b.node.title }}</h2>
+                <div v-html="b.node.content"></div>
             </div>
         </li>
-        <li>
+        <!-- <li>
             <img src="https://getuikit.com/docs/images/dark.jpg" alt="" uk-cover>
             <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
                 <h3 class="uk-margin-remove">Bottom</h3>
@@ -29,7 +30,7 @@
                 <h3 class="uk-margin-remove">Overlay Bottom Right</h3>
                 <p class="uk-margin-remove">Lorem ipsum dolor sit amet.</p>
             </div>
-        </li>
+        </li> -->
     </ul>
 
     <div class="uk-light">
@@ -39,3 +40,8 @@
 
 </div>
 </template>
+<script>
+export default {
+  props: ['dados']
+}
+</script>
